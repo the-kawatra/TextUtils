@@ -27,7 +27,7 @@ function App() {
     if(mode === 'light') {
       setMode('dark');
       document.body.style.color = 'white';
-      document.body.style.backgroundColor = 'black';
+      document.body.style.backgroundColor = '#000020';
       showAlert("Dark mode has been enabled", "Success");
       // document.title = 'TextUtils - Dark Mode';
     }
@@ -48,10 +48,10 @@ function App() {
       <Routes>
         {/* /users --> Component 1
         /users/home --> Component 2 */}
-            <Route exact path="/about" element={<About />}>
+            <Route exact path="/about" element={<About mode={mode}/>}>
             </Route>
             <Route exact path="/" element={
-            <TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert} />
+            <TextForm heading="Try TextUtils - Word counter Character counter Remove extra spaces Uppercase Lowercase Capitalcase"  mode={mode} showAlert={showAlert} />
             }>
             </Route>
           </Routes>
